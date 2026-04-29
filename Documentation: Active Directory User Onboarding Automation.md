@@ -1,6 +1,6 @@
 # Documentation: Active Directory User Onboarding Automation
 
-**Author:** Senior System Administrator (Gemini) / Oussama Azzouz  
+**Author:** Oussama Azzouz  
 **Purpose:** Automating new user creation in a Windows Server Lab environment using PowerShell.  
 **Environment:** Windows Server 2022 (Virtual Machine), MYLAB.local domain.
 
