@@ -36,14 +36,16 @@ A junior technician can execute the provisioning process by following these step
 This project evolved from a standalone script to a professional PowerShell function. Depending on the version you are using, the execution method differs.
 
 ### Version 1: Legacy Script (NewUser.ps1)
+1. Run the Script Directly
 
 The original version is a straightforward script that prompts the user for information.
 
-Execution: Run the file directly.
+```powershell
+.\NewUser.ps1
+```
 
-Method: .\NewUser.ps1
+**Limitations**: No logging or modularity.
 
-Limitation: No logging or modularity.
 
 ### Version 2: Professional Function (NewUser2.ps1)
 
@@ -53,21 +55,23 @@ The current version refactors the logic into a reusable function called New-Corp
 
 Because this tool is built as a Function, it must be loaded into the PowerShell session memory before use. Note the space between the first dot and the file path:
 
+```powershell
 . C:\Users\Administrator\Desktop\HELPDESK\NewUser2.ps1
-
+```
 
 2. Execute Provisioning
 
 Once loaded, call the custom command directly. You can use the Tab key to auto-complete the command name:
 
+```powershell
 New-CorporateUser -FirstName "Jane" -LastName "Doe" -Department "IT" -Verbose
-
+```
 
 3. Verification
 
-ADUC: Refresh the IT_Department OU to verify the new object.
+- **ADUC**: Refresh the IT_Department OU to verify the new object.
+- **Audit Logs**: Confirm the entry in `C:\Logs\UserAudit.csv`.
 
-Audit Logs: Confirm the entry in C:\Logs\UserAudit.csv.
 
 ### Troubleshooting
 
